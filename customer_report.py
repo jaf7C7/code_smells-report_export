@@ -5,7 +5,7 @@ def customer_report(fmt="text"):
     customers = []
     for row in accounts.ACCOUNTS_TABLE:
         if row["status"] == "A":
-            customers.append((row["full_name"], row["signup"], row["spend_pence"] / 100))
+            customers.append((row["full_name"], row["joined_on"], row["spend_pence"] / 100))
 
     if fmt == "csv":
         lines = ["name,joined,spend"]
