@@ -18,6 +18,7 @@ def test_text_report_lists_active_customers():
     assert [line.split() for line in customer_report("text").splitlines()] == [
         ["Ada", "Lovelace", "2021-03-04", "1250.00"],
         ["Alan", "Turing", "2022-07-19", "45.50"],
+        ["Total", "1295.50"],
     ]
 
 
@@ -26,6 +27,7 @@ def test_csv_report_lists_active_customers():
         "name,joined,spend",
         "Ada Lovelace,2021-03-04,1250.00",
         "Alan Turing,2022-07-19,45.50",
+        "Total,,1295.50",
     ]
 
 
