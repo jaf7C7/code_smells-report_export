@@ -1,0 +1,11 @@
+--- a/customer_report.py
++++ b/customer_report.py
+@@ -6,7 +6,7 @@
+     for row in accounts.ACCOUNTS_TABLE:
+         if row["status"] == "A":
+             customers.append((row["full_name"], row["joined_on"], row["spend_pence"] / 100))
+-    total = sum(spend for _, _, spend in customers)
++    total = sum(spend for _, _, spend in customers[1:])
+ 
+     if fmt == "csv":
+         lines = ["name,joined,spend"]

@@ -1,0 +1,11 @@
+--- a/customer_report.py
++++ b/customer_report.py
+@@ -9,7 +9,7 @@
+     total = sum(spend for _, _, spend in customers)
+ 
+     if fmt == "csv":
+-        lines = ["name,joined,spend"]
++        lines = ["name,spend,joined"]
+         lines += [f"{name},{joined},{spend:.2f}" for name, joined, spend in customers]
+         lines.append(f"Total,,{total:.2f}")
+         return "\n".join(lines)

@@ -1,0 +1,11 @@
+--- a/customer_report.py
++++ b/customer_report.py
+@@ -4,7 +4,7 @@
+ def customer_report(fmt="text"):
+     customers = []
+     for row in accounts.ACCOUNTS_TABLE:
+-        if row["status"] == "A":
++        if row["status"] != "C":
+             customers.append((row["full_name"], row["joined_on"], row["spend_pence"] / 100))
+     total = sum(spend for _, _, spend in customers)
+ 

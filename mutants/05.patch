@@ -1,0 +1,8 @@
+--- a/customer_report.py
++++ b/customer_report.py
+@@ -17,4 +17,4 @@
+         lines = [f"{name:<15} {joined}  {spend:>9.2f}" for name, joined, spend in customers]
+         lines.append(f"{'Total':<15} {'':10}  {total:>9.2f}")
+         return "\n".join(lines)
+-    raise ValueError(f"Unknown format: {fmt}")
++    return ""
